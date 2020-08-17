@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HerokuAppTests" verbose="1">
+    <listeners>
+        <listener class-name="ScreenShotOnFailListener"/>
+    </listeners>
+    <test name="Tests">
+        <classes>
+            <class name="LoginTest" />
+        </classes>
+    </test>
+</suite>
