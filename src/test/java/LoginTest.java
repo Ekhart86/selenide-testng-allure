@@ -1,4 +1,3 @@
-import helpers.Driver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -13,7 +12,6 @@ public class LoginTest extends BaseTest {
     public void positiveLoginTest() {
         app.loginPage.open();
         app.loginPage.login(VALID_LOGIN, VALID_PASSWORD);
-        Driver.waitForUrlContains("secure");
         app.securePage.checkLogoutButton();
         app.securePage.checkSuccessMessage();
     }
