@@ -25,6 +25,4 @@ public class SecurePage extends BasePage {
     public void checkSuccessMessage() {
         successMessage.shouldHave(text("You logged into a secure area!"));
     }
-
-
 }

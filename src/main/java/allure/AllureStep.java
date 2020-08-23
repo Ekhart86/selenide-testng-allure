@@ -9,7 +9,13 @@ public class AllureStep {
      * а второй код который будет в этом шаге выполнен
      */
     @Step("{0}")
-    public static void step(String title, Runnable code) {
+    public static void showStep(String title, Runnable code) {
         code.run();
     }
+
+    /**
+     * Шаг маркер для вывода URL
+     */
+    @Step("{0}")
+    public static void showStep(String url) {}
 }

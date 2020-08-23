@@ -1,12 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="HerokuAppTests" verbose="1">
-    <listeners>
-        <listener class-name="ScreenShotOnFailListener"/>
-    </listeners>
+<suite name="HerokuAppTests" thread-count="2" parallel="tests">
     <test name="Tests">
         <classes>
             <class name="LoginTest" />
+        </classes>
+    </test>
+    <test name="Tests 2">
+        <classes>
+            <class name="LoginTest2" />
         </classes>
     </test>
 </suite>
