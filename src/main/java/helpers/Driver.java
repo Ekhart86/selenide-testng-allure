@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class Driver {
     }
 
     public static WebDriver currentDriver() {
-        return WebDriverRunner.getSelenideDriver().getWebDriver();
+        return WebDriverRunner.getWebDriver();
     }
 
     public static void open(String url) {
@@ -58,7 +59,7 @@ public class Driver {
     }
 
     public static void waitForUrlContains(String urlChunk) {
-        WebDriverWait wait = new WebDriverWait(currentDriver(), 10);
+        WebDriverWait wait = new WebDriverWait(currentDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains(urlChunk));
     }
 
